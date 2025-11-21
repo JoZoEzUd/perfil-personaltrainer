@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Trainer • Modelo</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#f5f5f5; color:#333; }
+    .container { max-width:1100px; margin:0 auto; padding:20px; }
+    .header { background:#111; color:#fff; }
+    .nav { display:flex; justify-content:space-between; align-items:center; }
+    .menu a { color:#fff; margin:0 10px; text-decoration:none; }
+    .hero { background:#222; color:#fff; padding:60px 20px; }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .hero-image img { width:100%; border-radius:10px; }
+    .section { padding:40px 20px; }
+    .section.alt { background:#eee; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,.1); }
+    .btn { background:#34d399; color:#111; padding:10px 20px; border-radius:6px; text-decoration:none; cursor:pointer; display:inline-block; }
+    .btn-small { padding:6px 12px; background:#34d399; border:none; border-radius:6px; cursor:pointer; }
+    .footer { background:#111; color:#fff; text-align:center; padding:20px; }
+    form input, form textarea { width:100%; padding:10px; margin:10px 0; border-radius:6px; border:1px solid #ccc; }
+    form button { width:100%; }
+    .testimonial { display:none; }
+    .testimonial.active { display:block; background:#fff; padding:20px; border-radius:10px; }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img src="https://via.placeholder.com/50" alt="Logo Personal" class="logo" />
+        <span>Personal<strong>Fit</strong></span>
+      </a>
+      <nav class="menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#planos">Planos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato" class="btn">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Transforme seu corpo. Eleve sua rotina.</h1>
+        <p>Treinos personalizados, acompanhamento próximo e resultados reais.</p>
+        <a href="#contato" class="btn">Agende sua avaliação</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1558618771-96ef0ef88b28?q=80&w=900&auto=format&fit=crop" alt="Personal trainer com aluno" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="grid">
+        <div class="card"><h3>Treinamento funcional</h3><p>Força e condicionamento.</p></div>
+        <div class="card"><h3>Hipertrofia</h3><p>Ganhos de massa muscular.</p></div>
+        <div class="card"><h3>Emagrecimento</h3><p>Treinos metabólicos.</p></div>
+        <div class="card"><h3>Performance esportiva</h3><p>Agilidade e potência.</p></div>
+        <div class="card"><h3>Assessoria online</h3><p>Planilhas e acompanhamento remoto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section id="planos" class="section alt">
+    <div class="container">
+      <h2>Planos</h2>
+      <div class="grid">
+        <div class="card"><h3>Start</h3><p>R$199/mês</p></div>
+        <div class="card"><h3>Pro</h3><p>R$349/mês</p></div>
+        <div class="card"><h3>Elite</h3><p>R$599/mês</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2>Sobre mim</h2>
+      <p>Sou personal trainer com foco em resultados sustentáveis. Minha abordagem combina técnica, consistência e evolução mensurável.</p>
+      <ul>
+        <li>8+ anos de experiência</li>
+        <li>150+ alunos atendidos</li>
+        <li>Certificação CREF ativa</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="section alt">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <div class="carousel" id="carousel">
+        <article class="testimonial active">
+          <p>“Ganhei força e mobilidade em 6 meses. Treinos objetivos e acompanhamento real.”</p>
+          <span>— Ana, 32</span>
+        </article>
+        <article class="testimonial">
+          <p>“Perdi 8kg com treinos e ajustes semanais. Sem fórmulas mágicas, só constância.”</p>
+          <span>— Lucas, 28</span>
+        </article>
+      </div>
+      <div class="carousel-controls">
+        <button class="btn-small" data-prev>Anterior</button>
+        <button class="btn-small" data-next>Próximo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section">
+    <div class="container">
+      <h2>Contato</h2>
+      <form id="formContato">
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Mensagem"></textarea>
+        <button type="submit" class="btn">Enviar</button>
+        <p id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 PersonalFit • Modelo de site</p>
+    </div>
+  </footer>
+
+  <script>
+    // Carrossel de depoimentos
+    const items = Array.from(document.querySelectorAll(".testimonial"));
+    const prev = document.querySelector("[data-prev]");
+    const next = document.querySelector("[data-next]");
+    let idx = 0;
+
+    function setActive(i) {
+      items.forEach(el => el.classList.remove("active"));
+      items[i].classList.add("active");
+    }
+    setActive(idx);
+
+    prev?.addEventListener("click", () => {
+      idx = (idx - 1 + items.length) % items.length;
+      setActive(idx);
+    });
+
+    next?.addEventListener("click", () => {
+      idx = (idx + 1) % items.length;
+      setActive(idx);
+    });
+
+    // Formulário fake
+    const form = document.getElementById("formContato");
+    const statusEl = document.getElementById("formStatus");
+
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusEl.textContent = "Enviando...";
+      await new Promise(r => setTimeout(r, 700));
+      statusEl.textContent = "Obrigado! Entrarei em contato em breve.";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
